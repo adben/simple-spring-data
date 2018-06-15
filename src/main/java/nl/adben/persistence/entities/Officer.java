@@ -1,5 +1,6 @@
 package nl.adben.persistence.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,7 +13,9 @@ public class Officer {
     @GeneratedValue
     private Integer id;
     private Rank rank;
+    @Column(name = "first_name")
     private String first;
+    @Column(name = "last_name")
     private String last;
 
     public Officer() {
