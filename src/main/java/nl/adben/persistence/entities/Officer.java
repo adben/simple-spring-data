@@ -2,6 +2,8 @@ package nl.adben.persistence.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -12,6 +14,7 @@ public class Officer {
     @Id
     @GeneratedValue
     private Integer id;
+    @Enumerated(EnumType.STRING)
     private Rank rank;
     @Column(name = "first_name")
     private String first;
